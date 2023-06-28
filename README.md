@@ -6,9 +6,9 @@ sudo apt install emboss
 SRA-Toolkit
 sudo apt install sra-toolkit
 
-##Configuration
+## Configuration
 
-###Peptide Mapping
+### Peptide Mapping
 
 Copy the studied genome into the Genome folder (.fasta)
 Compatible with : - Ensembl genome
@@ -19,7 +19,7 @@ Run ABM_Mapping.sh
 
 Result in the Output/peptide_localisation.txt
 
-###Peptide Detection
+### Peptide Detection
 
 Download SRA run IDs from NCBI SRA website into the SRR_id folder
 
