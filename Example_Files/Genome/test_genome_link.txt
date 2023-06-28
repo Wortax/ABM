@@ -1,0 +1,1 @@
+download genome fasta file at : https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/dna/
