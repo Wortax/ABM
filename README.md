@@ -28,10 +28,12 @@ Request example : "embryo[All Fields] AND (stem cells[All Fields] OR stem cell[A
 
 More info : https://www.ncbi.nlm.nih.gov/sra/docs/srasearch/
 
--Download SRA run IDs as "Runinfo" and move it into the SRR_id folder
+-Download SRA run IDs as "Runinfo"
 
--Edit the peptide.txt to add your peptide amino acid sequence
+-Run ABM_DL_and_Analysis.sh with options -i and -r as such :  
+sh ABM_DL_and_Analysis.sh -i [peptide sequence] -r [path_to_Runlist] -k(optional)  
 
--Run ABM_DL_and_Analysis.sh
+Example : sh ABM_DL_and_Analysis.sh -i VRIKPGSA -r Run_idtest.csv -k  
+sh ABM_DL_and_Analysis.sh -h for more info  
 
 -Result in the Output/transcriptome_result.txt
