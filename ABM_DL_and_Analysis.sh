@@ -38,18 +38,16 @@ while IFS=, read -r srr_id b; do
     	echo "Downloading: $srr_id"
 	fastq-dump --fasta 0 --skip-technical --outdir Transcriptome/ $srr_id || continue
 	echo
-	grep -v ">" $srr_id.fasta  | head -n 3
-	echo
-	
 	reg_pep="$(python3 revtrans.py $peptide)"
 	echo Searching $peptide in $srr_id :
-	result=$(grep -v ">" ./Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
+	result=$(grep -v ">" Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
 	echo $result
 	echo
 	echo "$srr_id\t$result">> Temp/transcriptome_result.txt;
 	
-	if [ $remove=true ]
+	if [ "$remove" = true ]
 	then rm -rf Transcriptome/$srr_id.fasta
+ 	     echo deleting Run
 	fi
 done < $runlist
 	
