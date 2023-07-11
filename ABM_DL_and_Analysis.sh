@@ -21,7 +21,7 @@ while IFS=, read -r srr_id b; do
 	echo "$srr_id\t$result">> ../Temp/transcriptome_result.txt;
 
 	rm -rf $srr_id.fasta
-done < ../SRR_id/*.csv
+done < $(find ../SRR_id -type f -name "*.csv")
 	
 cd ..
 cat Temp/transcriptome_result.txt > Output/transcriptome_result.txt
