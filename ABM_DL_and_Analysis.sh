@@ -1,6 +1,6 @@
 rm Output/transcriptome_result.txt 2> /dev/null
 rm Temp/transcriptome_result.txt 2> /dev/null
-keep=$false
+remove=true
 
 while getopts "hi:r:k" option; do
     case $option in
@@ -15,11 +15,11 @@ while getopts "hi:r:k" option; do
            i) peptide=${OPTARG};;
            r) runlist=${OPTARG};;
            k) # keep option
-              keep=$true
-              echo "Keeping Downloaded transcriptomes"
-              exit;; 
+              remove=false
+              echo "Keeping Downloaded transcriptomes";; 
     esac
 done
+
 if [ -z "$peptide" ];
 then echo "no input peptide"
      return
@@ -42,14 +42,14 @@ while IFS=, read -r srr_id b; do
 	echo
 	
 	#peptide="$(cat ../peptide.txt)"
-	reg_pep="$(python3 ../revtrans.py $peptide)"
+	reg_pep="$(python3 revtrans.py $peptide)"
 	echo Searching $peptide in $srr_id :
 	result=$(grep -v ">" Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
 	echo $result
 	echo
 	echo "$srr_id\t$result">> Temp/transcriptome_result.txt;
 	
-	if [ !$keep ]
+	if [ $remove ]
 	then rm -rf Transcriptome/$srr_id.fasta
 	fi
 done < $runlist
