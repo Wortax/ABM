@@ -1,1 +1,0 @@
-Homo_sapiens.GRCh38.dna.chromosome.14.fa.pep	78128201	78128225	GTTAGGATTAAACCTGGGTCTGCC
