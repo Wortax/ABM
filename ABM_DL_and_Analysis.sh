@@ -41,7 +41,6 @@ while IFS=, read -r srr_id b; do
 	grep -v ">" $srr_id.fasta  | head -n 3
 	echo
 	
-	#peptide="$(cat ../peptide.txt)"
 	reg_pep="$(python3 revtrans.py $peptide)"
 	echo Searching $peptide in $srr_id :
 	result=$(grep -v ">" Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
