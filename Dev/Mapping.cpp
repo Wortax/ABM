@@ -53,7 +53,23 @@ pair<int, int> correct_coords(int s, int e, int frame_id, int frame_size){
 }
 
 
-int main () {
+int main (int argc, char *argv[]) {
+    string pep_seq;
+    for(;;)
+    {
+	switch(getopt(argc, argv,"p:"))
+	{
+	  case 'p':
+	    pep_seq = optarg;
+	    continue;
+
+	  case '?':
+	  case -1:
+	    break;
+	  }
+      break;
+    }
+    
     char cwd[PATH_MAX];
     getcwd(cwd, sizeof(cwd));
     fstream File;
@@ -83,7 +99,7 @@ int main () {
         return 0;
     }
     string line;
-    fstream pep_file;
+    /*fstream pep_file;
     pep_file.open(path+"/peptide.txt", ios::in);
     if (!pep_file) {
         cout<<"Couldn't open peptide file"<<endl;
@@ -93,7 +109,7 @@ int main () {
     string pep_seq = line;
     pep_seq.erase(remove(pep_seq.begin(),pep_seq.end(),'\n'), pep_seq.end());
     pep_seq.erase(remove(pep_seq.begin(),pep_seq.end(),' '), pep_seq.end());
-    pep_file.close();
+    pep_file.close();*/
 
     vector<string> frame_list;
     string curr_frame;
