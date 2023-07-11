@@ -43,7 +43,7 @@ while IFS=, read -r srr_id b; do
 	
 	reg_pep="$(python3 revtrans.py $peptide)"
 	echo Searching $peptide in $srr_id :
-	result=$(grep -v ">" Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
+	result=$(grep -v ">" ./Transcriptome/$srr_id.fasta | grep -E -c $reg_pep );
 	echo $result
 	echo
 	echo "$srr_id\t$result">> Temp/transcriptome_result.txt;
