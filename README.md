@@ -13,9 +13,9 @@ sudo apt install sra-toolkit
 -Copy the studied genome into the Genome folder (.fasta)  
 Compatible with : - Ensembl genome
 
--Edit the peptide.txt to add your peptide amino acid sequence
-
--Run ABM_Mapping.sh
+-Run ABM_Mapping.sh with option -i as such :  
+sh ABM_Mapping.sh -i [peptide sequence]  
+Example : sh ABM_Mapping.sh -i VRIKPGSA  
 
 -Result in the Output/peptide_localisation.txt
 
