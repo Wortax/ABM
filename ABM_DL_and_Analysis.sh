@@ -48,7 +48,7 @@ while IFS=, read -r srr_id b; do
 	echo
 	echo "$srr_id\t$result">> Temp/transcriptome_result.txt;
 	
-	if [ $remove ]
+	if [ $remove=true ]
 	then rm -rf Transcriptome/$srr_id.fasta
 	fi
 done < $runlist
