@@ -33,7 +33,7 @@ More info : https://www.ncbi.nlm.nih.gov/sra/docs/srasearch/
 -Run ABM_DL_and_Analysis.sh with options -i and -r as such :  
 sh ABM_DL_and_Analysis.sh -i [peptide sequence] -r [path_to_Runlist] -k(optional)  
 
-Example : sh ABM_DL_and_Analysis.sh -i VRIKPGSA -r Run_idtest.csv -k  
+Example : sh ABM_DL_and_Analysis.sh -i VRIKPGSA -r Run_id.csv -k  
 sh ABM_DL_and_Analysis.sh -h for more info  
 
 -Result in the Output/transcriptome_result.txt
