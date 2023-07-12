@@ -51,7 +51,7 @@ while IFS=, read -r srr_id b; do
 	fi
 done < $runlist
 	
-cat Temp/transcriptome_result.txt > Output/transcriptome_result.txt
+cat Temp/transcriptome_result.txt | sort -u | sort -k 2 -r > Output/transcriptome_result.txt
 cat Output/transcriptome_result.txt
 
 echo "Press enter to close... "
