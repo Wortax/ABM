@@ -1,3 +1,5 @@
+# Amino Base Mapping (ABM)
+
 ## Requirements
 
 EMBOSS
@@ -6,7 +8,7 @@ sudo apt install emboss
 SRA-Toolkit
 sudo apt install sra-toolkit
 
-## Configuration
+## How To Use
 
 Allow file to execute as a program for :
 - ABM_Detection.sh
@@ -26,6 +28,7 @@ Example : sh ABM_Mapping.sh -i VRIKPGSA
 -Result in the Output/peptide_localisation.txt
 
 ### Peptide Detection
+**Currently, Peptide Detection is limited to the analysis of the human genome**
 
 -Go to https://www.ncbi.nlm.nih.gov/sra
 
