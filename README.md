@@ -3,11 +3,9 @@
 ## Requirements
 
 EMBOSS  
-  
 sudo apt install emboss
-
-SRA-Toolkit  
   
+SRA-Toolkit  
 sudo apt install sra-toolkit
 
 ## How To Use
