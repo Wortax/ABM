@@ -8,6 +8,12 @@ sudo apt install sra-toolkit
 
 ## Configuration
 
+Allow file to execute as a program for :
+- ABM_DL_and_Analysis.sh
+- ABM_Mapping.sh
+- revtrans.py
+- search_pep.out
+
 ### Peptide Mapping
 
 -Copy the studied genome into the Genome folder (.fasta)  
