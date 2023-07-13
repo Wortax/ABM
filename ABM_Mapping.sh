@@ -16,7 +16,7 @@ if [ -z "$peptide" ];
 then echo "no input peptide"
      return
 fi
-
+peptide=$(echo $peptide | tr a-z A-Z)
 
 cd Genome
 rm -rf 	../Output/pep_localisation.txt || :
