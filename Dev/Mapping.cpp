@@ -145,9 +145,10 @@ int main (int argc, char *argv[]) {
         string genomic_seq = get_genomic_sequence(start, end, path+"/Genome/"+ filename.substr(0,filename.size()-4));
         cout<< filename + "\t" + to_string(start)+"\t"+to_string(end)+"\t"+genomic_seq <<endl;
         fstream output_file;
-        output_file.open(path + "/Output/pep_localisation.txt", ios::out);
-        output_file << filename + "\t" + to_string(start)+"\t"+to_string(end)+"\t"+genomic_seq ;
+        output_file.open(path + "/Output/pep_localisation.txt", ios_base::app);
+        output_file << filename + "\t" + to_string(start)+"\t"+to_string(end)+"\t"+genomic_seq+"\n" ;
         output_file.close();
+        
     }
     return 0;
 }
