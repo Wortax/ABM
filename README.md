@@ -28,7 +28,7 @@ Example : sh ABM_Mapping.sh -i VRIKPGSA
 -Result in the Output/peptide_localisation.txt
 
 ### Peptide Detection
-**Currently, Peptide Detection is limited to the analysis of the human genome**
+**Currently, Peptide Detection is limited to organisms with a genetic code similar to humans**
 
 -Go to https://www.ncbi.nlm.nih.gov/sra
 
