@@ -9,7 +9,7 @@ if "-useU" in sys.argv :
 else :
     ARN= False
 
-dict = {
+human_trans_mat = {
     "F":"TT[TC]",
     "L":"(TT[AG]|CT[ATCG])",
     "I":"AT[ATC]",
@@ -33,7 +33,7 @@ dict = {
 }
 regex=""
 for i in peptide :
-    regex+= dict[i]
+    regex+= human_trans_mat[i]
 result = "echo \""+ regex+"\""
 if ARN :
     result =result.replace("T","U")
